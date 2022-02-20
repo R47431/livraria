@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cadastro livro</title>
+
+<!-- Custom styles for this template -->
+<link href="/css/estilo-cadastro.css" rel="stylesheet" />
+</head>
+<body>
+
+	<form action="#" th:action="@{/salvar}" th:object="${livro}" method="post">
+		
+		<h1>Cadastrar novo livro</h1>
+		
+		<label> Título: </label> <br> <input type="text" th:field="*{nome}"placeholder="" /><br>
+		<label> Autor: </label> </br> <input type="text" th:field="*{autor}"placeholder="" /><br>
+		<label> Quantidade: </label> </br> <input type="text" th:field="*{quantidade}" placeholder="" /> <br>
+		<label> Preço: </label> </br> <input type="text" th:field="*{preco}" placeholder="" /> <br>
+		<button type="submit">Submit</button> <a href="/" class="button">cancelar</a>
+		
+	</form>
+
+</body>
+</html>
